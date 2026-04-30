@@ -8,7 +8,7 @@ const leadSchema = z.object({
   email: z.string().trim().email("Неверный e-mail").max(255).optional().or(z.literal("")),
   service: z.string().trim().min(1).max(200),
   message: z.string().trim().max(2000).optional().or(z.literal("")),
-  // Honeypot — must be empty
+  // Honeypot - must be empty
   website: z.string().max(0).optional().or(z.literal("")),
 });
 
